@@ -11,8 +11,7 @@ COPY thin/config.yml /usr/local/rubysinatra//thin/config.yml
 COPY entrypoint.bash /
 
 RUN chown -R www-data:www-data /usr/local/rubysinatra/ \
-  && cp -a ${RUBYSINATRA_HOME} /root/app \
-  && touch /root/firstrun
+  && cp -a ${RUBYSINATRA_HOME} /root/app
 
 EXPOSE 3000
 
