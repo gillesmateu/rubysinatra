@@ -17,6 +17,10 @@ then
 fi
 
 cd ${RUBYSINATRAAPP_HOME} 
-/usr/local/bundle/bin/bundle install
+
+if [ Gemfile -nt Gemfile/lock ]
+then
+  /usr/local/bundle/bin/bundle install
+fi
 
 thin -c  ${RUBYSINATRATHIN_HOME} -R ${RUBYSINATRAAPP_HOME}/config.ru  start 
