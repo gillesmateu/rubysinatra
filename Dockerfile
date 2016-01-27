@@ -6,8 +6,10 @@ ENV RUBYSINATRA_HOME=/usr/local/rubysinatra/
 
 RUN mkdir -p /usr/local/rubysinatra/{thin,app}
 
-COPY app/* /usr/local/rubysinatra/app/
-COPY thin/config.yml /usr/local/rubysinatra//thin/config.yml
+COPY app/app.rb /usr/local/rubysinatra/app/
+COPY app/Gemfile /usr/local/rubysinatra/app/
+COPY app/config.ru /usr/local/rubysinatra/app/
+COPY thin/config.yml /usr/local/rubysinatra/thin/config.yml
 COPY entrypoint.bash /
 
 RUN chown -R www-data:www-data /usr/local/rubysinatra/ \

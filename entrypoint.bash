@@ -18,5 +18,5 @@ fi
 
 cd ${RUBYSINATRAAPP_HOME} 
 /usr/local/bundle/bin/bundle install
-chown -R www-data:www-data ${RUBYSINATRA_HOME}/.bundle
+
 thin -c  ${RUBYSINATRATHIN_HOME} -R ${RUBYSINATRAAPP_HOME}/config.ru  start 
