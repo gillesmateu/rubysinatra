@@ -11,4 +11,4 @@ servers: 1
 threaded: true
 no-epoll: true
 daemonize: true
-chdir: /home/app/app
+chdir: /usr/local/rubysinatra/app
