@@ -15,7 +15,7 @@ RUN chown -R www-data:www-data /usr/local/rubysinatra/ \
 
 EXPOSE 3000
 
-VOLUME /usr/local/rubysinatra/app/
+VOLUME /usr/local/rubysinatra
 
 WORKDIR /usr/local/rubysinatra
 CMD /entrypoint.bash
