@@ -1,0 +1,6 @@
+sinatra:
+  image: gmateu/rubysinatra:latest
+  ports:
+   - 3000:3000
+  volumes:
+   - ./rubysinatra:/usr/local/rubysinatra/
