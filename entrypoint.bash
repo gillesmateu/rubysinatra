@@ -20,7 +20,7 @@ cd ${RUBYSINATRAAPP_HOME}
 
 if [ Gemfile -nt Gemfile/lock ]
 then
-  /usr/local/bundle/bin/bundle install
+  /usr/local/bin/bundle install
 fi
 
 thin -c  ${RUBYSINATRATHIN_HOME} -R ${RUBYSINATRAAPP_HOME}/config.ru  start 
